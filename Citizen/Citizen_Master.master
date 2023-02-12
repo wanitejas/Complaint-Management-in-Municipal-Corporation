@@ -1,0 +1,224 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Citizen_Master.master.cs" Inherits="Citizen_Citizen_Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+  <body>
+	<div id="header">
+		<div class="clearfix">
+			<div class="logo">
+				<a href="citizen_Index.aspx">
+                <img src="images/Logo.jpg" alt="LOGO" height="52" width="362"/></a>
+			</div>
+			<ul class="navigation">
+				<li>
+					<a href="citizen_Index.aspx">Home</a>
+				</li>
+                <li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="citizen_Complaints_frm.aspx">Complaints</a></li>
+				 <li>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="view_complaints.aspx">INBOX</a> 
+                </li>  
+             <li>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="../Index.aspx">Logout</a> 
+                </li> 
+               
+                			
+			
+            </ul>
+		</div>
+	</div>
+	<div id="contents">
+		 <div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="images/kalatalav.jpg" style="width:100%" alt=" "/>
+    <div class="text">Kala Talav</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="images/GARDEN.JPG"  style="width:100%" alt=" "/>
+    <div class="text">KDMC garden</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="images/IMG1 copy.jpg" style="width:100%" alt=" "/>
+    <div class="text">KDMC Building</div>
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="images/IMG_20161207_114532_453.jpg" alt="img" style="width:100%"/>
+    <div class="text">KDMC Roads</div>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+</br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
+		</div>
+		  <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+				
+		<div class="featured">
+			<h2>Quick Links</h2>
+			<ul class="clearfix">
+				<li>
+					<div class="frame1">
+						<div class="box">
+							<img src="images/services.jpg" alt="Img" height="130" width="197"/>
+						</div>
+					</div>
+					<p>
+						<b>Our Services</b> 
+					</p>
+                    <p>
+                        KDMC provides many services like health,first aid,water supply,
+					    swegage,road facillity,bridges,railway,bus facillity and many more.</p>
+                    <br/><br/><br/><br/>
+					<a href="../Index.aspx" class="more">Read More</a>
+				</li>
+				<li>
+					<div class="frame1">
+						<div class="box">
+							<img src="images/News.png" alt="Img" height="130" width="197"/>
+						</div>
+					</div>
+					<p>
+						<b>News</b></p>
+                    <p>
+						The notes of&nbsp; Rs.500 and Rs.1000 will accepted till 15 Dec,2016.
+                        Evacuation in Dombivli lasts for an hour
+                        </p>
+                    <br /><br /><br />
+               <a href="../Index.aspx" class="more">Read More</a>
+				 
+				</li>
+				<li>
+					<div class="frame1">
+						<div class="box">
+							<img src="images/Forms.png" alt="Img" height="130" width="197"/>
+						</div>
+					</div>
+					<p>
+						<b>Online Forms</b></p>
+                    <p>
+						Online forms are available for direct contact with us.JUst fill up the given 
+                        form and just after entering this form you will able to communicate with us</p>
+					<br/><br/><br/><br/><a href="../Index.aspx" class="more">Read More</a>
+				</li>
+				<li>
+					<div class="frame1">
+						<div class="box">
+							<img src="images/Places.png" alt="Img" height="130" width="197"/>
+						</div>
+					</div>
+					<p>
+						<b>Places</b>
+					</p>
+                    <p>
+						Municiple office(KDMC &quot;A&quot; ward office),NRC school library,KDMC school,KDMC 
+                        garden,KDMC garden no.1,KDMC water treatment plant</p>
+                    <br/><br/><br/><br/>
+					<a href="../Index.aspx" class="more">Read More</a>
+				</li>
+			</ul>
+		</div>
+	
+	<div id="footer">
+		<div class="clearfix">
+			<div class="section">
+				<h4>Latest News</h4>
+				<p>
+					Elections are going on
+				</p>
+                <p>
+					&nbsp;</p>
+			</div>
+			<div class="section contact">
+				<h4>Contact Us</h4>
+				<p>
+					<span>Address:</span> KDMC</p>
+				<p>
+					<span>Phone:</span> 0251 220 6206</p>
+				<p>
+					<span>Email:</span> kdmckalyanwest@gmail.com</p>
+			</div>
+			<div class="section">
+				<h4>SEND US A MESSAGE</h4>
+				<p>
+					Please Refer blow Links for:</p>
+                <p>
+                <a href="#">Feedback</a><br /></p>
+               <p> <a href="#">Complaints</a>
+					&nbsp;</p>
+                <p> <a href="../Login.aspx">Admin Login</a>
+					&nbsp;</p>
+				<a href="http://www.freewebsitetemplates.com/misc/contact/" class="subscribe">Click to send us an email</a>
+			</div>
+		</div>
+		<div id="footnote">
+			<div class="clearfix">
+				<div class="connect">
+					<a href="http://freewebsitetemplates.com/go/facebook/" class="facebook"></a><a href="http://freewebsitetemplates.com/go/twitter/" class="twitter"></a><a href="http://freewebsitetemplates.com/go/googleplus/" class="googleplus"></a><a href="http://pinterest.com/fwtemplates/" class="pinterest"></a>
+				</div>
+				<p>
+					NIKITA WANI© Copyright 2017. All Rights Reserved.
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
